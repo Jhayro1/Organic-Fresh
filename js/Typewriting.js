@@ -14,9 +14,9 @@ $(function() {
 	  setTimeout( function(){
 		  if($("#site-type").length) {
           $(".typewrite span").typed({
-            strings: ["Hogar", "Seguridad","Organic Fresh"],
+            strings: ["Mayoristas", "Juntos","Organic Fresh"],
             typeSpeed: 120,
-            backDelay: 0,
+            backDelay: 1000,
             loop: false,
             contentType: 'html', 
             loopCount: false,
