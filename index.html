@@ -9,9 +9,38 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
+  <body background="">
 
+    <!-- Messenger Plugin de chat Code -->
+    <div id="fb-root"></div>
 
+    <!-- Your Plugin de chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "101559549382209");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v14.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <div class="btn-volver-arriba" id="btnVolverArriba">
       <a href="#" class="volver-arriba">
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
@@ -31,9 +60,10 @@
         </div>
         <nav class="menu-principal">
           <a href="#" class="volver-arriba">INICIO</a>
-          <a href="#proyectos" class="scroll-suave">BENEFICIOS</a>
-          <a href="#acercaDe" class="scroll-acercaDe">ACERCA DE</a>
+          <a href="#beneficios" class="scroll-suave">BENEFICIOS</a>
+          <a href="#acercaDe" class="scroll-acercaDe">¿QUIENES SOMOS?</a>
           <a href="#equipo" class="scroll-equipo">PLANES</a>
+          <a href="#testimonio" class="scroll-testimonio">TESTIMONIOS</a>
           <a href="#contacto" class="scroll-suave">CONTACTO</a>
         </nav>
       </div>
@@ -46,9 +76,10 @@
 
         <nav class="menu-principal">
           <a href="#" class="volver-arriba">INICIO</a>
-          <a href="#proyectos" class="scroll-suave">BENEFICIOS</a>
-          <a href="#acercaDe" class="scroll-acercaDe">ACERCA DE</a>
+          <a href="#beneficios" class="scroll-suave">BENEFICIOS</a>
+          <a href="#acercaDe" class="scroll-acercaDe">¿QUIENES SOMOS?</a>
           <a href="#equipo" class="scroll-equipo">PLANES</a>
+          <a href="#testimonio" class="scroll-testimonio">TESTIMONIOS</a>
           <a href="#contacto" class="scroll-suave">CONTACTO</a>
         </nav>
 
@@ -73,9 +104,10 @@
       </a>
       <nav class="menu-principal">
         <a href="#" class="volver-arriba">INICIO</a>
-        <a href="#proyectos" class="scroll-suave">BENEFICIOS</a>
-        <a href="#acercaDe" class="scroll-acercaDe">ACERCA DE</a>
+        <a href="#beneficios" class="scroll-suave">BENEFICIOS</a>
+        <a href="#acercaDe" class="scroll-acercaDe">¿QUIENES SOMOS?</a>
         <a href="#equipo" class="scroll-equipo">PLANES</a>
+        <a href="#testimonio" class="scroll-testimonio">TESTIMONIOS</a>
         <a href="#contacto" class="scroll-suave">CONTACTO</a>
       </nav>
       <div class="top-redes">
@@ -110,58 +142,248 @@
         </div>
       </section>
 
-      <section class="proyectos" id="proyectos">
+      <section class="beneficios" id="beneficios">
         <div class="contenedor">
           <div class="titulo-seccion">
-            <h2>Que Hacemos</h2>
-            <p>Somos especialistas unir a las parsonas indicadas para arrentar un nuevo hogar</p>
+            <h2>Beneficios</h2>
+            <img src="" alt="">
           </div>
-          <div class="galeria-proyectos">
-            <div class="proyecto">
-              <img src="img/beneficio1.jpg" alt="beneficio1" class="imagen-proyecto">
-              <p>Compra</p>
-            </div>
-            <div class="proyecto">
-              <img src="img/beneficio2.jpg" alt="beneficio2" class="imagen-proyecto2">
-              <p>Vende</p>
+          <div class="video-beneficio">
+            <iframe width="660" height="415" src="https://www.youtube.com/embed/5WE9kKNof-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>BRINDAMOS UNA PLATAFORMA DE COMERCIO Y TE CONTACTAMOS CON COMPRADORES POTENCIALES.</h3>
+          </div>
+          <div class="beneficios-items">
+           <div class="bene-item">
+            <img src="img/beneficio1.jpg" alt="">
+            <a href="" class="btn">Comprar</a>
+           </div>
+           <div class="bene-item">
+            <img src="img/beneficio2.jpg" alt="">
+            <a href="" class="btn">Vender</a>
+           </div>
+           <div class="bene-item">
+            <img src="img/beneficio3.png" alt="">
+            <a href="" class="btn">Crecer</a>
+           </div>
+          </div>
+        </div>      
+      </section>
 
+      <section class="nosotros" id="acercaDe">
+        <div class="contenedor">
+        <div class="titulo-seccion">
+          <h2>¿Quienes Somos?</h2>
+          <p>Un equipo innovador creador de una plataforma web, los agricultores podrán promocionar sus 
+            productos, interactuar con mayoristas interesados y proveedores, y con ello 
+            permitirles tener una mejor organización y planificación sobre la producción de sus cultivos.</p>
+        </div>
+        <div class="nosotros-perfiles">
+          <div class="perfil">
+            <img src="img/perfil1.png" class="img-p1" alt="">
+            <h2 class="name-p1">Luis Broncano</h2>
+            <p class="descripcion-p1">Luis Broncano, estudiante de Ingeniería de Sistemas en la Universidad Peruana de Ciencias Aplicadas con conocimientos en gestión de Bases de Datos y Lenguajes de programación.</p>
+            <a class="perfil1 btn" id="p1">Conocer mas</a>
+          </div>
+          <div class="perfil">
+            <img src="img/perfil2.png" class="img-p2" alt="">
+            <h2 class="name-p2">Alexander Cano</h2>
+            <p class="descripcion-p2">Alexander Cano, estudiante de la Universidad Privada de Ciencias Aplicadas con conocimientos en la  gestion de Base de Datos, Ciberseguridad y Lenguajes de programación.</p>
+            <a  class="perfil1 btn" id="p2">Conocer mas</a>
+          </div>
+          <div class="perfil">
+            <img src="img/perfil3.png" class="img-p3" alt="">
+            <h2 class="name-p3">Antony Ortega</h2>
+            <p class="descripcion-p3">Mi nombre es Antony Ortega soy estudiante de la Universidad Privada de Ciencias Aplicadas (UPC). Actualmente, tengo cierto dominio en C++, C#, HTML, CSS y SQL server.</p> 
+            <a  class="perfil1 btn" id="p3">Conocer mas</a> 
+          </div>
+          <div class="perfil">
+            <img src="img/perfil4.png" class="img-p4" alt="">
+            <h2 class="name-p4">Fernando Sotelo</h2>
+            <p class="descripcion-p4">Fernando Sotelo, estudiante de Ingenieria de Sistemas de información en la Universidad Peruana de Ciencias Aplicadas con conocimientos en gestion de Base de Datos, Redes y Lenguajes de programación.</p>
+            <a  class="perfil1 btn" id="p4">Conocer mas</a>
+          </div>
+          <div class="perfil">
+            <img src="img/perfil5.png" class="img-p5" alt="">
+            <h2 class="name-p5">Diego Alban</h2>
+            <p class="descripcion-p5">Diego Alban, estudiante del 6to ciclo de la Universidad Peruana de Ciencias Aplicadas, cuento con nociones en Servidor de Base de datos(SQL) y lenguajes de programación como C++, C#, Java y Python. A demás, manejo el idioma inglés fluidamente</p>
+            <a class="perfil1 btn" id="p5">Conocer mas</a>
+          </div>
+          <div class="perfil">
+            <img src="img/perfil6.png" class="img-p6" alt="">
+            <h2 class="name-p6">Jhayro Roncal</h2>
+            <p class="descripcion-p6">Jhayro Roncal, estudiante de Ingenieria de Sitemas en la Universidad Peruana de Ciencias Aplicacdas soy Front-end Developer y cuento con conocimientos de Product Manager.</p>
+            <a  class="perfil1 btn" id="p6">Conocer mas</a>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section class="nuestro-equipo" id="equipo">
+        <div class="contenedor">
+          <div class="titulo-seccion">
+            <h2>Planes</h2>
+            <p>Contamos con los mejores planes de suscripcion para nuestros 2 usuarios</p>
+          </div>
+          <div class="equipo">
+            <div class="plan-completo">
+              <div class="plan-img">
+                <img src="img/plan-agricultor.png" alt="">
+              </div>
+              <div class="plan">
+                <h2>PLAN AGRICULTOR</h2>
+                <div class="m-4">
+                  <div class="checklinea">
+                      <i class="fa fa-check"></i><p>Acceso a Organic Market</p> 
+                  </div>
+                  <div class="checklinea">
+                      <i class="fa fa-check"></i><p>Creacion de su perfil de usuario</p> 
+                  </div>
+                  <div class="checklinea">
+                      <i class="fa fa-check"></i><p>Ofrecer sus productos</p> 
+                  </div>
+  
+                  <div class="checklinea">
+                      <i class="fa fa-check"></i><p>Contactar con mayoristas interesados</p> 
+                  </div>
+                  <div class="checklinea">
+                    <i class="fa fa-check"></i><p>Realizar la venta de manera online</p> 
+                  </div>
+                  <div class="checklinea">
+                    <i class="fa fa-check"></i><p>Comision del 3% por venta realizada.</p> 
+                  </div>
+                </div>
+  
+                <div class="text-center m-5">
+                  <a href="" id="free-a">Empezar ahora</a>
+                </div>
+              </div>
             </div>
-            <div class="proyecto">
-              <img src="img/beneficio3.jpg" alt="beneficio3" class="imagen-proyecto3">
-              <p>Crece</p>
+
+            <div class="plan-completo">
+              <div class="plan-img">
+                <img src="img/plan-mayorista.png" alt="">
+              </div>
+              <div class="plan">
+                <h2>PLAN MAYORISTA</h2>
+                <div class="m-4 ">
+                  <div class="checklinea">
+                      <i class="fa fa-check"></i> <p>Acceso a Organic Market</p>
+                  </div>
+                  <div class="checklinea">
+                      <i class="fa fa-check"></i> <p>Creacion de su perfil de usuario</p> 
+                  </div>
+                  <div class="checklinea">
+                      <i class="fa fa-check"></i> <p>Visualizar productos ofertados.</p>
+                  </div>
+                  <div class="checklinea">
+                      <i class="fa fa-check"></i> <p>Filtrar los productos</p> 
+                  </div>
+                  <div class="checklinea">
+                    <i class="fa fa-check"></i> <p>Contactar con el proveedor</p> 
+                  </div>
+                  <div class="checklinea">
+                    <i class="fa fa-check"></i> <p>Realizar la compra de manera online</p> 
+                  </div>
+                  <div class="checklinea">
+                    <i class="fa fa-check"></i> <p>Costo mensual de S/.10.00</p> 
+                  </div>
+              </div>
+              <div class="text-center m-5">
+                <a href="" id="pay-a">Empezar ahora</a>
+              </div>
+              </div>
             </div>
            
           </div>
         </div>
       </section>
 
-      <section class="acerca-de" id="acercaDe">
-        <div class="contenedor">
-          <div class="titulo-seccion">
-            <h2>¿Quiénes somos?</h2>
-            <p>Conoce más sobre nosotros, lo que hacemos y cómo lo hacemos</p>
-          </div>
-          <div class="texto-acerca-de">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur eum saepe voluptates,
-              quae delectus fuga libero exercitationem quo! Velit voluptatibus reprehenderit obcaecati temporibus fugiat
-              possimus molestiae delectus quia hic.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="contenedor-slider">
+      <section class="contenedor-slider" id="testimonio">
         <div class="slider" id="slider">
           <div class="slide">
-            <img src="img/slide1.jpg" alt="Slide">
+            <p>Excelente plataforma, me permite poder ofertar mis productos y tener una mayor cantidad de compradores 
+              potenciales, puedo hacer los tratos mediante el chat directamente con los interesados y 
+              la compra se realiza de manera online lo cual me genera seguridad por las cantidades que se manejan.</p>
+              <div class="user">
+                <div>
+                  <img src="img/slide1.png" alt="Slide">
+                </div>
+                <div >
+                  <h4>VICTOR</h4>
+                  <p>AGRICULTOR</p>
+                </div>
+              </div>
           </div>
           <div class="slide">
-            <img src="img/slide2.jpg" alt="Slide">
+            <p>Excelente plataforma, me permitio poder ver las ofertas de distintos agricultores y asi comprar 
+              precio y calidada, tambien me brinda mayor facilidad de realizar la compra y seguridad ya que las 
+              transacciones son online, me siento satisfecho ya que me es de gran ayuda.</p>
+              <div class="user">
+                <div>
+                  <img src="img/slide2.png" alt="Slide">
+                </div>
+                <div>
+                  <h4>FELIPE</h4>
+                  <p>MAYORISTA</p>
+                </div>
+              </div>
           </div>
           <div class="slide">
-            <img src="img/slide3.jpg" alt="Slide">
+            <p>Excelente plataforma, me permite poder ofertar mis productos y tener una mayor cantidad de compradores 
+              potenciales, puedo hacer los tratos mediante el chat directamente con los interesados y 
+              la compra se realiza de manera online lo cual me genera seguridad por las cantidades que se manejan.</p>
+              <div class="user">
+                <div>
+                  <img src="img/slide1.png" alt="Slide">
+                </div>
+                <div >
+                  <h4>VICTOR</h4>
+                  <p>AGRICULTOR</p>
+                </div>
+              </div>
           </div>
           <div class="slide">
-            <img src="img/slide4.jpg" alt="Slide">
+            <p>Excelente plataforma, me permitio poder ver las ofertas de distintos agricultores y asi comprar 
+              precio y calidada, tambien me brinda mayor facilidad de realizar la compra y seguridad ya que las 
+              transacciones son online, me siento satisfecho ya que me es de gran ayuda.</p>
+              <div class="user">
+                <div>
+                  <img src="img/slide2.png" alt="Slide">
+                </div>
+                <div >
+                  <h4>FELIPE</h4>
+                  <p>MAYORISTA</p>
+                </div>
+              </div>
+          </div>
+
+          <div class="slide">
+            <p>Excelente plataforma, me permite poder ofertar mis productos y tener una mayor cantidad de compradores 
+              potenciales, puedo hacer los tratos mediante el chat directamente con los interesados y 
+              la compra se realiza de manera online lo cual me genera seguridad por las cantidades que se manejan.</p>
+              <div class="user">
+                <div>
+                  <img src="img/slide1.png" alt="Slide">
+                </div>
+                <div >
+                  <h4>VICTOR</h4>
+                  <p>AGRICULTOR</p>
+                </div>
+              </div>
+          </div>
+          <div class="slide">
+            <p>Excelente plataforma, me permitio poder ver las ofertas de distintos agricultores y asi comprar 
+              precio y calidada, tambien me brinda mayor facilidad de realizar la compra y seguridad ya que las 
+              transacciones son online, me siento satisfecho ya que me es de gran ayuda.</p>
+              <div class="user">
+                <div>
+                  <img src="img/slide2.png" alt="Slide">
+                </div>
+                <div >
+                  <h4>FELIPE</h4>
+                  <p>MAYORISTA</p>
+                </div>
+              </div>
           </div>
         </div>
         <div class="btn-anterior" id="btnAnterior">
@@ -172,147 +394,64 @@
         </div>
       </section>
 
-      <section class="nuestro-equipo" id="equipo">
-        <div class="contenedor">
-          <div class="titulo-seccion">
-            <h2>Planes de suscripción</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
-          </div>
-          <div class="equipo">
-            <div class="plan">
-              <h2>PLAN FREE</h2>
-              <div class="m-4">
-                <div class="checklinea">
-                    <i class="fa fa-check"></i><p>Beneficio 1 dasdasdas</p> 
-                </div>
-                <div class="checklinea">
-                    <i class="fa fa-check"></i><p>Beneficio 1 dasdasdasda</p> 
-                </div>
-                <div class="checklinea">
-                    <i class="fa fa-check"></i><p> Beneficio 1 dasdasdasd</p> 
-                </div>
-
-                <div class="checklinea">
-                    <i class="fa fa-check"></i><p>Beneficio 1 dasdasdasdasd</p> 
-                </div>
-            </div>
-
-            <div class="text-center m-5">
-                <h2>FREE</h2>
-                
-                <a href="" id="free-a">Empezar ahora</a>
-            
-            </div>
-
-            </div>
-
-            <div class="plan">
-              <h2>PLAN PREMIUN</h2>
-              <div class="m-4 ">
-
-                <div class="checklinea">
-                    <i class="fa fa-check"></i> <p> Beneficio 1 dasdasdasdas</p>
-                </div>
-                <div class="checklinea">
-                    <i class="fa fa-check"></i>  <p>Beneficio 2 dasdasdasdasd</p> 
-                </div>
-                <div class="checklinea">
-                    <i class="fa fa-check"></i> <p>Beneficio 3 dasdasdasdasda</p>
-                </div>
-                <div class="checklinea">
-                    <i class="fa fa-check"></i> <p>Beneficio 4 dasdasdasdasda</p> 
-                  </div>
-
-            </div>
-            <div class="text-center m-5">
-                <h2>5$/mes</h2>
-               
-                  <a href="" id="pay-a">Empezar ahora</a>
-                
-            </div>
-            </div>
-
-            
-          </div>
-        </div>
-      </section>
-
-      <section class="info-extra">
-        <div class="contenedor">
-          <div class="info">
-
-            <div class="contenido-info">
-              <div class="icono-info">
-                <i class="fa fa-users" aria-hidden="true"></i>
-              </div>
-              <div class="texto-info">
-                <h4>Agricultores</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing edicta, perferendis rem enim conseq</p>
-                <a href="">Busca tu roommate</a>
-              </div>
-            </div>
-
-            <div class="contenido-info">
-              <div class="icono-info">
-                <i class="fa fa-handshake-o" aria-hidden="true"></i>
-              </div>
-              <div class="texto-info">
-                <h4>Mayorista</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing edicta, perferendis rem enim conseq</p>
-                <a href="">Publica tu inmueble</a>
-              </div>
-            </div>
-
-          </div>
-          <div class="foto">
-          </div>
-        </div>
-      </section>
-
-      <div class="contacto" id="contacto" data-parallax="scroll" data-image-src="img/bg-contacto.jpg">
-        <div class="contenedor">
-          <div class="contenedor-formulario">
-            <div class="formulario" id="formulario">
-              <h2>Déjanos tu correo y te brindaremos mayor información</h2>
-              <p>Solo necesitamos tu nombre y correo para contactarte</p>
-              <form>
-                <div>
-                  <input type="text" name="nombre" placeholder="Nombre" id="nombre">
-                  <p class="error">Por favor escribe tu nombre</p>
-                </div>
-                <div>
-                  <input type="email" name="email" placeholder="Correo electrónico" id="email">
-                  <p class="error">Por favor escribe tu correo</p>
-                </div>
-                <div>
-                  <input type="submit" name="enviar" value="Enviar">
-                </div>
-              </form>
-            </div>
-
-            <div class="foto">
-
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
     </section>
 
+    
     <footer>
-      <div class="copy">
-        <p>Todos los derechos reservados</p>
-      </div>
-      <div class="footer-redes">
-        <a href="#">
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-        </a>
-        <a href="#">
-          <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-        <a href="#">
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a>
+      <div class="contenedor-footer" id="contacto">
+        
+        <div class="banner-footer">
+          <h2>Estamos para ayudarte a crecer</h2>
+          <a href="" class="btn">Contactanos</a>
+        </div>
+        
+        <div class="info-footer">
+          <div class="contenido-info contenedor">
+            <div class="colum">
+              <h3>INFORMACION</h3>
+              <p>Somos una plataforma con la finalidad de fomentar el comercio entre nuestra comunidad.</p>
+              <div class="footer-redes">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <div class="colum">
+              <h3>NAVEGACION</h3>
+              <ul>
+                <li><a href="#" class="volver-arriba">INICIO</a></li>
+                <li><a href="#beneficios" class="scroll-suave">BENEFICIOS</a></li>              
+                <li><a href="#acercaDe" class="scroll-acercaDe">¿QUIENES SOMOS?</a></li>
+                <li><a href="#equipo" class="scroll-equipo">PLANES</a></li>
+                <li><a href="#testimonio" class="scroll-testimonio">TESTIMONIOS</a></li>
+              </ul>
+            </div>
+            <div class="colum">
+              <h3>CONTACTANOS</h3>
+              <h4><i class="fa fa-location"></i>Av.Primavera 666</h4>
+              <h4><i class="fa fa-envelope"></i>organicmarket@outlook.es</h4>
+              <input type="email" name="" id="">
+            </div>
+          </div>
+          <div class="botton-footer contenedor">
+            <div class="colum1-botton">
+              <h3>Allright Reserved - organic market</h3>
+            </div>
+            <div class="colum2-botton">
+              <a href="">Disclaimer</a>
+              <a href="">Privacy Policy</a>
+              <a href="">Term Of Use</a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
 
@@ -321,6 +460,7 @@
     <script src="js/stickyHeader.js"></script>
     <script src="js/scrollSuave.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/modal-perfiles.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/validacion.js"></script>
     <script src="js/menuMobile.js"></script>
